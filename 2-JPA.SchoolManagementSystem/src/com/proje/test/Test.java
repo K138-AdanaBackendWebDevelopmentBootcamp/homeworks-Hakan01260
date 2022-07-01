@@ -63,7 +63,6 @@ public class Test {
             Kursları creditScorlarına göre sıralama.
             courseController.findOrderByCourseCreditScore().forEach(System.out::println);
          */
-
     }
 
     private static void saveTestData() {
