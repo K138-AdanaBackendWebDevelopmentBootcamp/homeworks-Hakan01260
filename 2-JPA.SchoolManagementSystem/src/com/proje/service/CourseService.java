@@ -13,7 +13,6 @@ public class CourseService implements CrudRepository<Course>, CourseRepository {
 
     EntityManager entityManager = EntityManagerUtils.getEntityManager("mysqlPU");
 
-
     @Override
     public List<Course> findAll() {
         return entityManager.createQuery("FROM Course", Course.class).getResultList();
