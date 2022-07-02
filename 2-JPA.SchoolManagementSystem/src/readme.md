@@ -4,4 +4,3 @@
 
 ![This is OOP Class Diagram](https://i.hizliresim.com/f2crq2j.PNG)
 
-
