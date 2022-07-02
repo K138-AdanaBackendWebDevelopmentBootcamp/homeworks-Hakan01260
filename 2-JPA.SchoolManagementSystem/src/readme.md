@@ -2,5 +2,5 @@
 
 ## Class diagram of Insurance Company
 
-![This is OOP Class Diagram](./resources/UML.png)
+![This is OOP Class Diagram](https://www.hizliresim.com/f2crq2j)
 
