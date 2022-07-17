@@ -80,14 +80,14 @@ public class CourseService implements CrudRepository<Course>, CourseRepository {
     @Override
     public List<Course> findGreatCreditScore(int creditScore) {
         return entityManager.createQuery("FROM Course c WHERE c.creditScore > :creditScore", Course.class)
-                .setParameter("creditScore",creditScore).getResultList();
+                .setParameter("creditScore", creditScore).getResultList();
     }
 
     @Override
     public List<Course> findBetweenCreditScore(int minCreditScore, int maxCreditScore) {
-        return  entityManager.createQuery("FROM Course c WHERE c.creditScore BETWEEN :minCreditScore AND :maxCreditScore", Course.class)
-                .setParameter("minCreditScore",minCreditScore)
-                .setParameter("maxCreditScore",maxCreditScore)
+        return entityManager.createQuery("FROM Course c WHERE c.creditScore BETWEEN :minCreditScore AND :maxCreditScore", Course.class)
+                .setParameter("minCreditScore", minCreditScore)
+                .setParameter("maxCreditScore", maxCreditScore)
                 .getResultList();
     }
 

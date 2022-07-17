@@ -3,11 +3,12 @@ package com.proje.model;
 import javax.persistence.Entity;
 
 @Entity
-public class VisitingResearcher extends Instructor{
+public class VisitingResearcher extends Instructor {
 
     private double hourlySalary;
 
-    public VisitingResearcher() {}
+    public VisitingResearcher() {
+    }
 
     public VisitingResearcher(String name, String address, long phoneNumber, double hourlySalary) {
         super(name, address, phoneNumber);

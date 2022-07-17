@@ -8,6 +8,9 @@ import com.proje.model.VisitingResearcher;
 import com.proje.utils.EntityManagerUtils;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
@@ -67,22 +70,22 @@ public class Test {
 
     private static void saveTestData() {
 
-        Course course1 = new Course("Mathematics",80);
-        Course course2 = new Course("English",50);
-        Course course3 = new Course("Art",30);
-        Course course4 = new Course("Physics",60);
-        Course course5 = new Course("Turkish",70);
+        Course course1 = new Course("Mathematics", 80);
+        Course course2 = new Course("English", 50);
+        Course course3 = new Course("Art", 30);
+        Course course4 = new Course("Physics", 60);
+        Course course5 = new Course("Turkish", 70);
 
-        Student student1 = new Student("Hakan", LocalDate.of(1999, Month.APRIL, 12),"Adana","male");
-        Student student2 = new Student("Oguzhan", LocalDate.of(2002, Month.MARCH, 05),"Mersin","male");
-        Student student3 = new Student("Ayse", LocalDate.of(1995, Month.JANUARY, 15),"Istanbul","female");
-        Student student4 = new Student("Fatma", LocalDate.of(1996, Month.DECEMBER, 28),"Bursa","female");
-        Student student5 = new Student("Burak", LocalDate.of(2005, Month.MARCH, 12),"Adana","male");
+        Student student1 = new Student("Hakan", LocalDate.of(1999, Month.APRIL, 12), "Adana", "male");
+        Student student2 = new Student("Oguzhan", LocalDate.of(2002, Month.MARCH, 05), "Mersin", "male");
+        Student student3 = new Student("Ayse", LocalDate.of(1995, Month.JANUARY, 15), "Istanbul", "female");
+        Student student4 = new Student("Fatma", LocalDate.of(1996, Month.DECEMBER, 28), "Bursa", "female");
+        Student student5 = new Student("Burak", LocalDate.of(2005, Month.MARCH, 12), "Adana", "male");
 
-        PermanentInstructor permanentInstructor1 = new PermanentInstructor("Ali","Adana",55555555555l,9500);
+        PermanentInstructor permanentInstructor1 = new PermanentInstructor("Ali", "Adana", 55555555555l, 9500);
 
-        VisitingResearcher visitingResearcher1 = new VisitingResearcher("Rümeysa","Bursa",2222222l,65.9);
-        VisitingResearcher visitingResearcher2 = new VisitingResearcher("Buse","Istanbul",1111111l,92.4);
+        VisitingResearcher visitingResearcher1 = new VisitingResearcher("Rümeysa", "Bursa", 2222222l, 65.9);
+        VisitingResearcher visitingResearcher2 = new VisitingResearcher("Buse", "Istanbul", 1111111l, 92.4);
 
         course1.setInstructor(permanentInstructor1);
         course2.setInstructor(permanentInstructor1);
@@ -141,9 +144,9 @@ public class Test {
 
             entityManager.getTransaction().commit();
 
-        }catch (Exception e){
+        } catch (Exception e) {
             entityManager.getTransaction().rollback();
-        }finally {
+        } finally {
             EntityManagerUtils.closeEntityManager(entityManager);
         }
     }

@@ -2,7 +2,7 @@ package com.proje.model;
 
 import java.util.List;
 
-public class VisitingResearcher extends Instructor{
+public class VisitingResearcher extends Instructor {
 
     private double hourlySalary;
 

@@ -2,7 +2,7 @@ package com.proje.model;
 
 import java.util.List;
 
-public class PermanentInstructor extends Instructor{
+public class PermanentInstructor extends Instructor {
 
     private double fixedSalary;
 

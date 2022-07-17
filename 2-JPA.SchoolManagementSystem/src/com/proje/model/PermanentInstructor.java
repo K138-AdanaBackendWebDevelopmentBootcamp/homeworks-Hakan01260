@@ -3,11 +3,12 @@ package com.proje.model;
 import javax.persistence.Entity;
 
 @Entity
-public class PermanentInstructor extends Instructor{
+public class PermanentInstructor extends Instructor {
 
     private double fixedSalary;
 
-    public PermanentInstructor() {}
+    public PermanentInstructor() {
+    }
 
     public PermanentInstructor(String name, String address, long phoneNumber, double fixedSalary) {
         super(name, address, phoneNumber);
